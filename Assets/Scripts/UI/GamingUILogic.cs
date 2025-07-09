@@ -77,4 +77,9 @@ public class GamingUILogic : MonoBehaviour,IGameManagerListener
         background.SetActive(true);
     }
     
+    public void onClickExit()
+    {
+        Application.Quit();
+    }
+    
 }
