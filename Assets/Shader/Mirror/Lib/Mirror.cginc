@@ -71,7 +71,7 @@ v2f_m vert_mirror (appdata v)
     o.vertex = mul(unity_MatrixVP, o.wPos);
     o.normal.xyz = UnityObjectToWorldNormal(v.normal);
 
-    fixed t = nd / _MirrorRange;       // 将位置与镜面最大范围比利作为fade alpha的插值系数
+    fixed t = nd / _MirrorRange;       
    
     o.wPos.w = nd;      // 距离存于o.wPos.w
     o.uv = v.uv;
@@ -88,6 +88,6 @@ fixed4 frag_mirror (v2f_m i) : SV_Target
     half d = dot(dir, n);                       // 与反向镜面的距离
     if (d > 0) discard;                         // 如果超过了平面，那就丢弃
     
-    fixed4 col = tex2D(_MainTex, i.uv) * _Color;     // 加上扰动UV后再采样主纹理
+    fixed4 col = tex2D(_MainTex, i.uv) * _Color;     
     return fixed4(col.rgb, i.normal.w) * _DarkColor * _MirrorColor; // 返回颜色与透明度;
 }
