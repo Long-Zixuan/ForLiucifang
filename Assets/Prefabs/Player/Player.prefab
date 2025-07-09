@@ -552,7 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorType_: 0
   speed: 5
-  jumpForce: 6.5
+  jumpForce: 1000
   jumpTime: 1
   changeColEffect: {fileID: 8771972552311404799, guid: 2b2e5806c1232af4a9808d1a964a3855, type: 3}
   playerBody_: {fileID: 2372775610623822984}

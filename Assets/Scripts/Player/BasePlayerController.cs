@@ -89,7 +89,7 @@ public class BasePlayerController : MonoBehaviour,IGameManagerListener
             {
                 ani_.SetTrigger("Jump");
             }
-            rb_.AddForce(Vector3.up * jumpForce, ForceMode.Force);
+            rb_.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Force);
         } 
     }
 
